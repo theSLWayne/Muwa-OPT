@@ -1,6 +1,6 @@
 # Muwa-OPT - A budget-friendly OPT-based LLM 
 
-![](Muwa.png)
+![Muwa Cover Image](Muwa.png)
 
 Muwa is a fine-tuned LoRA model based on Facebook's OPT model architecture. Muwa was fine-tuned using the [databricks-dolly-15k](https://huggingface.co/datasets/databricks/databricks-dolly-15k), which is a dataset of instruction-following records that belong to multiple categories like brainstorming, classification, closed QA, generation, information extraction, open QA, and summarization. **The specialty of Muwa is that only free resources have been used to fine-tune the model**, no fancy arrays of GPUs or paid GPU processors were not used for fine-tuning the model; only the free-tier of Google Colaboratory.
 
@@ -16,7 +16,7 @@ Make sure you install the following Python packages in the environment where the
 pip install torch peft datasets evaluate transformers accelerate bitsandbytes
 ```
 
-First, OPT 1.3b model should be loaded and then Muwa should be loaded from its HuggingFace repository. After the models are loaded, they can be used for inference.
+First, OPT 1.3b model should be loaded and then Muwa should be loaded from their respective HuggingFace repositories. After the models are loaded, they can be used for inference.
 
 ```python
 import torch
@@ -71,8 +71,14 @@ model = PeftModel.from_pretrained(
 
 ## Training Muwa
 
+This model was fine-tuned for 2 Epochs using the aforementioned Databricks Dolly 15K dataset. This model and its base model (OPT 1.3b) can be loaded in 8-bit. The notebook that was used for training this model can be found on this repo, including my notes on each code block.
+
+The model was trained only using T4 GPU provided by Google Colab. **In order to fit the whole model and the dataset into it, the dataset had an input limit of 1024 tokens per each query**. **This was done because with the default value, the GPU RAM was not enough to fine-tune the model**.
+
+With the limit in input tokens, the model training took ~12 GB of GPU RAM.
+
+## Testing and Evaluating
 
 
-## Evaluating Muwa
 
 ## 
