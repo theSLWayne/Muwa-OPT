@@ -77,8 +77,28 @@ The model was trained only using T4 GPU provided by Google Colab. **In order to 
 
 With the limit in input tokens, the model training took ~12 GB of GPU RAM.
 
+### LoRA and PEFT
+
+TODO: Mention the LoRA paper, briefly how it works and the [youtube link](https://www.youtube.com/watch?v=_K3HgjnRHCY&lc=Ugyqpr8yVUW2DHlvsoZ4AaABAg) of paper explanation video.
+
 ## Testing and Evaluating
 
+Muwa was tested and evaluated using SQuAD mini, wikitext, and piqa datasets. Both Muwa and its base model, OPT 1.3b were evaluated seperately using all mentioned datasets and the results can be summarized as follows:
+
+| Dataset | OPT 1.3b | Muwa |
+|---------|----------|------|
+| SQuAD Mini (*avg. f1 score*) | 24.587 | **26.234** |
+| wikitext (*perplexity*) | 13.91406 | **13.96875** |
+| piqa (*accuracy*) | 0.495 | **0.532** |
+
+As shown, Muwa has been able to outperform its base model by fine tuning using a rather smaller dataset (compared to others like [Alpaca](https://huggingface.co/datasets/tatsu-lab/alpaca) available for these tasks) for all the evaluation datasets. 
+
+This shows that LLMs that have Billions of parameters can be fine-tuned using resources which are available for free and you can actually improve the model's performance by doing so.
+
+Code used for evaluating Muwa can be found in the notebook which is included in this repo.
+
+## The Story Behind Muwa
 
 
-## 
+## License
+
