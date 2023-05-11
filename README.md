@@ -1,5 +1,7 @@
 # Muwa-OPT - A budget-friendly OPT-based LLM 
 
+[Muwa Repository on HuggingFace](https://huggingface.co/theSLWayne/Muwa-1.3b)
+
 ![Muwa Cover Image](Muwa.png)
 
 Muwa is a fine-tuned LoRA model based on Facebook's OPT model architecture. Muwa was fine-tuned using the [databricks-dolly-15k](https://huggingface.co/datasets/databricks/databricks-dolly-15k), which is a dataset of instruction-following records that belong to multiple categories like brainstorming, classification, closed QA, generation, information extraction, open QA, and summarization. **The specialty of Muwa is that only free resources have been used to fine-tune the model**, no fancy arrays of GPUs or paid GPU processors were not used for fine-tuning the model; only the free-tier of Google Colaboratory.
