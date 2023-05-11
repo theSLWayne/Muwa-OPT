@@ -77,9 +77,23 @@ The model was trained only using T4 GPU provided by Google Colab. **In order to 
 
 With the limit in input tokens, the model training took ~12 GB of GPU RAM.
 
-### LoRA and PEFT
+### PEFT and LoRA  
 
-TODO: Mention the LoRA paper, briefly how it works and the [youtube link](https://www.youtube.com/watch?v=_K3HgjnRHCY&lc=Ugyqpr8yVUW2DHlvsoZ4AaABAg) of paper explanation video.
+PEFT(Parameter-Efficient Fine-tuning) is a set of approaches that are meant to reduce the cost of fine-tuning, storing, and deploying large models. According to [this HuggingFace article on PEFT](https://huggingface.co/blog/peft), 
+
+*`PEFT approaches only fine-tune a small number of (extra) model parameters while freezing most parameters of the pretrained LLMs, thereby greatly decreasing the computational and storage costs. This also overcomes the issues of catastrophic forgetting, a behaviour observed during the full finetuning of LLMs. PEFT approaches have also shown to be better than fine-tuning in the low-data regimes and generalize better to out-of-domain scenarios. It can be applied to various modalities, e.g., image classification and stable diffusion dreambooth.`*
+
+HuggingFace has launched a Python package with the same name and according to the documentation it implements a number of PEFT methods:
+
+1. LoRA
+2. Prefix Tuning
+3. P-Tuning
+4. Prompt Tuning
+5. AdaLoRA
+
+This package is used in fine-tuning and in the inference of Muwa. More details about this package can be discovered [here](https://github.com/huggingface/peft).
+
+LoRA (Low-Rank Adaptation) is a method proposed for adapting large pre-trained language models to specific tasks or domains. It involves freezing the pre-trained model weights and adding trainable rank decomposition matrices to each layer of the Transformer architecture, which significantly reduces the number of trainable parameters for downstream tasks. This approach allows for efficient adaptation of language models with fewer trainable parameters and reduced GPU memory requirements. More information on LoRA can be found on the paper that introduced the method, which can be accessed [here](https://arxiv.org/abs/2106.09685). Also, I found [this video](https://www.youtube.com/watch?v=_K3HgjnRHCY&lc=Ugyqpr8yVUW2DHlvsoZ4AaABAg) that explains the paper in simple terms, which I found to be very useful.
 
 ## Testing and Evaluating
 
