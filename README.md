@@ -115,6 +115,11 @@ Code used for evaluating Muwa can be found in the notebook which is included in 
 
 ## The Story Behind Muwa
 
+As mentioned above, Muwa was heavily inspired by Eluwa model developed by Yudhanjaya et al. "Eluwa" means goat in Sinhalese. Continuing the trend of naming LLMs after even-toed ungulates, this model is named "Muwa".
+
+Deers aren't as fearsome as Goats, or even Llamas and alpacas but they are still an impressive species. They are graceful, agile, and known for their antlers, which they shed and regrow every year. In some cultures, deers are considered a symbol of gentleness and kindness. All the more reasons to name this model after them.
+
+About the graphic located at the beginning of this document, that is the work of someone(me) with zero knowledge and experience in design, and it shows. The initial image was taken from [freepngimg.com](https://www.freepngimg.com/png/22758-deer-head-free-download) and is protected under [Creative Commons (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/) license. Then that image was colorized using [Colorizer Models HuggingFace space](https://huggingface.co/spaces/trysem/Colorizer_Models). Then the text was added after loading the colorized image into [Canva](canva.com), which provided the final output.
 
 ## License
 
