@@ -123,3 +123,8 @@ About the graphic located at the beginning of this document, that is the work of
 
 ## License
 
+The base model used for this work, Facebook's OPT has its own license, which can be found [here](https://github.com/facebookresearch/metaseq/blob/main/projects/OPT/MODEL_LICENSE.md). 
+
+Databricks Dolly 15k model is protected under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), allowing it to be modified, redistributed, and used for any purpose, even commercially.
+
+Although the dataset is allowed to be modified and redistributed, the licensing of OPT does not allow to use it for any commercial or any other non-research related cases, therefore making Muwa restricted to be used only for research, under CC BY NC 4.0.
